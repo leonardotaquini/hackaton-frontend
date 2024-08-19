@@ -11,7 +11,7 @@ export const MenuList = () => {
 
 
     const navigation = [
-        { title: 'item1', path: '/item1' },
+        { title: 'Dashboard', path: '/dashboard' },
         { title: 'item2', path: '/item2' },
         { title: 'item3', path: '/item3' },
       ];

@@ -1,4 +1,5 @@
 import { SubMenu } from "@/components/dashboard/SubMenu";
+import { redirect } from "next/navigation";
 
 
 
@@ -12,6 +13,7 @@ export default function DasboardLayout({
 }: {
   children: React.ReactNode;
 }) {
+
   return (
     <main className="h-full flex flex-col">
       <SubMenu />

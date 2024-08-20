@@ -17,6 +17,8 @@ import {
 import { Input } from "@/components/shadcn/ui/input";
 import { redirect } from 'next/navigation';
 
+import{signIn} from 'next-auth/react'
+
 const formSchema = z.object({
   email: z.string().min(2, {
     message: "Username must be at least 2 characters.",
@@ -39,8 +41,11 @@ export default function LoginPage() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
 
-    const {data} = await axios.post("https://bhpwtnt7-4000.brs.devtunnels.ms/api/auth/login", values );
-       
+    const {data} = await axios.post("", values );
+    await signIn('credentials', {
+      email: values.email,
+      password: values.password,
+    })
     console.log(data);
   }
 

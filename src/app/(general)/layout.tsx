@@ -13,7 +13,7 @@ export default function GeneralLayout({
   return (
     <>
       <Navbar />
-      {children}
+      {children} {/*   main */}
     </>
   );
 }
